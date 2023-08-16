@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+  <!DOCTYPE HTML>
 <html lang="en">
 	<head>
 		<title>ajapro</title>
@@ -15,35 +15,53 @@
 		<noscript><link rel="stylesheet" href="assets/noscript.css" /></noscript>
 		<script src="https://smtpjs.com/v3/smtp.js"></script>
 
+
 		<script type="text/javascript">
-			function sendEmail() {
-				let name = document.getElementById("form01-name").value ;
-				let email =  document.getElementById("form01-email").value;
-				let number = document.getElementById("form01-number").value ;
-				let message = document.getElementById("form01-message").value ;
-			
-
-				let body = "<hr/> Name:" + name + "<br/><hr/> E-mail:" + email + "<br/><hr/> Contact number:" + number + " <br/><hr/> Message:" + message +"<hr/>" ;
-
-				Email.send({
-					SecureToken : "eb4d3b39-d61f-4d08-827c-11d9d8367cbb",
-					To : 'support@ajapro.com',
-					From : 'support@ajapro.com',
-					Subject : "Message from Contact Form - Ajapro Website",
-					Body : body
-				}).then(
-				  message =>{
-					alert("Thank you for contacting us");
-					// Clear input fields after successful submission
-					document.getElementById("form01-name").value = "";
-					document.getElementById("form01-email").value = "";
-					document.getElementById("form01-number").value = "";
-					document.getElementById("form01-message").value = "";
-				  } 
-				);
-
+			function updateSubmitButtonState() {
+				let name = document.getElementById("form01-name").value;
+				let email = document.getElementById("form01-email").value;
+				let number = document.getElementById("form01-number").value;
+				let message = document.getElementById("form01-message").value;
+		
+				
 			}
-			</script>
+		
+			document.getElementById("form01-name").addEventListener("input", updateSubmitButtonState);
+			document.getElementById("form01-email").addEventListener("input", updateSubmitButtonState);
+			document.getElementById("form01-number").addEventListener("input", updateSubmitButtonState);
+			document.getElementById("form01-message").addEventListener("input", updateSubmitButtonState);
+		
+			function sendEmail() {
+				let name = document.getElementById("form01-name").value;
+				let email = document.getElementById("form01-email").value;
+				let number = document.getElementById("form01-number").value;
+				let message = document.getElementById("form01-message").value;
+		
+				if (!(name && email && number && message)) {
+					return;
+				}
+		
+				let body = "<hr/> Name:" + name + "<br/><hr/> E-mail:" + email + "<br/><hr/> Contact number:" + number + " <br/><hr/> Message:" + message + "<hr/>";
+		
+				Email.send({
+					SecureToken: "eb4d3b39-d61f-4d08-827c-11d9d8367cbb",
+					To: 'support@ajapro.com',
+					From: 'support@ajapro.com',
+					Subject: "Message from Contact Form - Ajapro Website",
+					Body: body
+				}).then(
+					message => {
+						alert("Thank you for contacting us");
+						document.getElementById("form01-name").value = "";
+						document.getElementById("form01-email").value = "";
+						document.getElementById("form01-number").value = "";
+						document.getElementById("form01-message").value = "";
+						updateSubmitButtonState();
+					}
+				);
+			}
+		</script>
+		
 	</head>
 	<body class="is-loading">
 		<div id="wrapper">
@@ -137,7 +155,7 @@
 								<div class="inner">
 									<h2 id="text14" class="style5">contact us</h2>
 									<p id="text05" class="style1">We are ready to listen and learn about product vision. Let Ajapro be part of your journey in creating solutions to better the world.</p>
-									<form id="form01" method="post" action="#" class="style1">
+									<form id="form01" method="post" action="#" class="style1" onsubmit="sendEmail(); return false;">
 										<div class="inner">
 											<div class="field">
 												<input type="text" name="name" id="form01-name" placeholder="Name" maxlength="128" required />
@@ -152,7 +170,7 @@
 												<textarea data-gramm_editor="false" name="message" id="form01-message" placeholder="Message" maxlength="16384" required></textarea>
 											</div>
 											<div class="actions">
-												<button type="button" onclick="sendEmail()">submit</button>
+												<button id="submit-button" type="submit"  >submit</button>
 											</div>
 										</div>
 										<input type="hidden" name="id" value="form01"  />
