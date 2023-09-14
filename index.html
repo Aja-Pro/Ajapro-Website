@@ -80,7 +80,7 @@
 	<body class="is-loading">
 		<div id="wrapper">
 			<div id="main">
-				<div class="inner">
+				<div class="inner" style="background-color: #292B33;">
 					<section id="home-section">
 						<div id="container06" class="style6 container default full">
 							<div class="wrapper">
@@ -104,6 +104,8 @@
 								</div>
 							</div>
 						</div>
+	
+
 						<div id="container01" data-scroll-id="one" data-scroll-behavior="center" data-scroll-offset="0" class="style1 container columns full">
 							<div class="wrapper">
 								<div class="inner">
@@ -157,13 +159,110 @@
 										<p id="text04" class="style1">we are software engineers, have expertise in building software products for talent, energy, high-tech, and automotive industries</p>
 										<ul id="buttons04" class="style1 buttons">
 											<li>
-												<a href="#subscribe" class="button n01">Next</a>
+												<a href="#four" class="button n01">Next</a>
 											</li>
 										</ul>
 									</div>
 								</div>
 							</div>
 						</div>
+
+						<!-- Ajapro Video Gallery start here < -->
+
+						<div class="videoContainer" data-scroll-id="four">
+							<h1>Ajapro Video Gallery</h1>
+							<br>
+							<div class="videoRow">
+								<div class="videoCol">
+									<div class="feature-image">
+										<img src="assets/images/image08.jpg" alt="Intro ajapro Video" id="feature-image1" width="72%" onclick="playVideo('assets/videos/container09.mp4')">
+										<img src="assets/images/play_button.png" alt="Play Button" id="playButton1" class="play-btn" onclick="playVideo('assets/videos/container09.mp4')">
+									</div>
+								</div>
+								<div class="videoCol">
+									<!-- 1st video -->
+									<div class="small-image-row">
+										<div class="small-image">
+											<img src="assets/images/image06.jpg" alt="About ajapro Video" width="100%" onclick="playVideo('assets/videos/container09.mp4')">
+											<img src="assets/images/play_button.png" alt="Play Button" id="playButton2" class="play-btn" onclick="playVideo('assets/videos/container09.mp4')">
+										</div>
+										<p>Imagine having 400 research articles,
+										</p>
+									</div>
+									<!-- 2nd video -->
+									<div class="small-image-row">
+										<div class="small-image">
+											<img src="assets/images/image07.jpg" alt="About ajapro Video" width="100%" onclick="playVideo('assets/videos/container010.mp4')">
+											<img src="assets/images/play_button.png" alt="Play Button" id="playButton3" class="play-btn" onclick="playVideo('assets/videos/container010.mp4')">
+										</div>
+										<p>
+											Our solution was an AI-driven Q&A system.</p>
+										</div>
+								</div>
+							</div>
+						</div>
+						<div class="inner">
+							<div>
+								<h2 id="text22" class="style5"> About</h2>
+								<br>
+								<p id="text23" class="style1">"Imagine having 400 research articles, each spanning an average of 40 pages. It's overwhelming to even think of reading through them, isn't it? One of our clients faced this very challenge. Their goal? To quickly pull insights from these articles without wading through each page. Our solution was an AI-driven Q&A system. We built a sophisticated AI workflow that digests the content of these documents, leveraging machine learning algorithms. Now, you can simply ask a question and get insights directly from these 400 documents without reading them. If you're looking to derive smart insights from your content in a similar way, reach out to us. Let's transform how you interact with your data!"</p>
+								<br>
+								<ul id="buttons01" class="style1 buttons">
+									<li>
+										<a href="#subscribe" class="button n01">Next</a>
+									</li>
+								</ul>
+								<br>
+							</div>
+						</div>
+
+						<!-- video -->
+
+						<div class="video-player" id="videoPlayer">
+							<video width="84%" controls id="ajaproVideo">
+								<source src="assets/videos/container09.mp4" type="video/mp4">
+							</video>
+							<img src="assets/images/close_button.png" alt="close Button" class="close-btn" id="StopVideoClick" onclick = "stopVideo()">
+						</div>
+
+
+						<script>
+							 // Ajapro Intro Gallery Video 
+								var videoPlayer1 = document.getElementById("videoPlayer");
+								var ajaproVideo1 = document.getElementById("ajaproVideo");
+								var playButton1 = document.getElementById("playButton1");
+								var playButton2 = document.getElementById("playButton2");
+								var playButton3 = document.getElementById("playButton3");
+
+								function stopVideo(){
+									videoPlayer1.style.display = "none";
+						
+								} 
+								function playVideo(file){
+									ajaproVideo1.src = file;
+									videoPlayer1.style.display = "block";
+								
+								}
+								 // Add a click event listener to the button - play video
+									playButton1.addEventListener("click", function() {
+										ajaproVideo1.play(); 
+									});
+									playButton2.addEventListener("click", function() {
+										ajaproVideo1.play(); 
+									});
+									playButton3.addEventListener("click", function() {
+										ajaproVideo1.play(); 
+									});
+									// Stop while click on close button
+									StopVideoClick.addEventListener("click", function() {
+										ajaproVideo1.pause(); 
+									});
+															
+						</script>
+
+						<!-- Ajapro Video Gallery start here -->
+
+
 						<div id="container03" data-scroll-id="subscribe" data-scroll-behavior="center" data-scroll-offset="0" class="style4 container default full">
 							<div class="wrapper">
 								<div class="inner">
@@ -241,6 +340,7 @@
 				</div>
 			</div>
 		</div>
+
 		<script src="assets/main.js"></script>
 	</body>
 </html>
