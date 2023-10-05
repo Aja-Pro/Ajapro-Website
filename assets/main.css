@@ -1982,7 +1982,6 @@ form.style1 input[type="checkbox"] + label {
 form.style1 input[type="text"], form.style1 input[type="email"], form.style1 input[type="tel"], form.style1 select, form.style1 .file {
 	height: 2.75rem;
 	padding: 0 0.9625rem; 
-	
 	line-height: 2.75rem;
 }
 form.style1 input[type="tel"] {
