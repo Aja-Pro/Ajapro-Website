@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<title>Ajapro AI</title>
-		<link rel="icon" href="assets/images/ajaprologo.jpg" type="image/jpg">
+		<link rel="icon" href="assets/images/ajaprologo_removebg.png" type="image/jpg">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<meta name="color-scheme" content="light only" />
@@ -13,7 +13,15 @@
 		<meta property="og:description" content="software product engineering" />
 		<link href="https://fonts.googleapis.com/css?display=swap&family=Inter:400,400italic,500,500italic,300,300italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="assets/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"></script>
 		<noscript><link rel="stylesheet" href="assets/noscript.css" /></noscript>
+		<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+		/>
+	
 		<script src="https://smtpjs.com/v3/smtp.js"></script>
 		<script type="text/javascript">
 			window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
@@ -59,7 +67,7 @@
 			function sendEmail() {
 				let name = document.getElementById("form01-name").value;
 				let email = document.getElementById("form01-email").value;
-				let number = document.getElementById("form01-number").value;
+				let number = document.getElementById("form01-number").value; 
 				let message = document.getElementById("form01-message").value;
 		
 				if (!(name && email && number && message)) {
@@ -287,14 +295,14 @@
 											<div class="field">
 												<input type="email" name="email" id="form01-email" placeholder="Email" maxlength="128" required />
 											</div>
-											<div class="field">
-												<input type="number" name="number" id="form01-number" placeholder="Mobile Number" minlength="10" required />
+											<div class="field" >
+												<input type="tel" name="number" id="form01-number" placeholder="Mobile Number" minlength="10" required />
 											</div>
 											<div class="field">
 												<textarea data-gramm_editor="false" name="message" id="form01-message" placeholder="Message" maxlength="16384" required></textarea>
 											</div>
 											<div class="actions">
-												<button id="submit-button" type="submit"  >submit</button>
+												<button id="submit-button" type="submit">submit</button>
 											</div>
 										</div>
 										<input type="hidden" name="id" value="form01"  />
@@ -353,5 +361,21 @@
 		</div>
 
 		<script src="assets/main.js"></script>
+		<!-- Country Code start here -->	
+		  <script>
+			var input = document.querySelector("#form01-number");
+			var iti = window.intlTelInput(input, {
+				utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+			});
+			// Add an event listener to dynamically update the input field
+			iti.promise.then(function () {
+				input.addEventListener("countrychange", function () {
+					var selectedCountryCode = iti.getSelectedCountryData().dialCode;
+					input.value = "+" + selectedCountryCode +" ";
+				});
+			});
+		</script>
+		<!-- Country Code end here -->			
 	</body>
+	
 </html>
