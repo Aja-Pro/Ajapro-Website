@@ -246,39 +246,54 @@ footer{
     font-size: 17px;
     text-decoration: none;
     transition: all 0.4s ease;
+    /* background-color: #2774b8; */
   }
   .top .media-icons a:nth-child(1){
-    background: #4267B2;
+    background: #339721;
   }
   .top .media-icons a:nth-child(1):hover{
-    color: #4267B2;
+    color: #39cf48;
     background: #fff;
   }
   .top .media-icons a:nth-child(2){
-    background: #1DA1F2;
+    background: #dc5353;
   }
   .top .media-icons a:nth-child(2):hover{
-    color: #1DA1F2;
+    color: #FF0000;
     background: #fff;
   }
   .top .media-icons a:nth-child(3){
-    background: #E1306C;
+    background: #4267B2;
   }
   .top .media-icons a:nth-child(3):hover{
-    color: #E1306C;
+    color: #4267B2;
     background: #fff;
   }
   .top .media-icons a:nth-child(4){
-    background: #0077B5;
+    background: #1DA1F2;
   }
   .top .media-icons a:nth-child(4):hover{
-    color: #0077B5;
+    color: #1DA1F2;
     background: #fff;
   }
   .top .media-icons a:nth-child(5){
-    background: #FF0000;
+    background: #E1306C;
   }
   .top .media-icons a:nth-child(5):hover{
+    color: #E1306C;
+    background: #fff;
+  }
+  .top .media-icons a:nth-child(6){
+    background: #0077B5;
+  }
+  .top .media-icons a:nth-child(6):hover{
+    color: #0077B5;
+    background: #fff;
+  }
+  .top .media-icons a:nth-child(7){
+    background: #FF0000;
+  }
+  .top .media-icons a:nth-child(7):hover{
     color: #FF0000;
     background: #fff;
   }

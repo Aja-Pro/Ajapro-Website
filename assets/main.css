@@ -91,39 +91,54 @@ footer{
     font-size: 17px;
     text-decoration: none;
     transition: all 0.4s ease;
+	background-color: #2774b8;
   }
   .top .media-icons a:nth-child(1){
-    background: #4267B2;
+    background: #339721;
   }
   .top .media-icons a:nth-child(1):hover{
-    color: #4267B2;
+    color: #39cf48;
     background: #fff;
   }
   .top .media-icons a:nth-child(2){
-    background: #1DA1F2;
+    background: #dc5353;
   }
   .top .media-icons a:nth-child(2):hover{
-    color: #1DA1F2;
+    color: #FF0000;
     background: #fff;
   }
   .top .media-icons a:nth-child(3){
-    background: #E1306C;
+    background: #4267B2;
   }
   .top .media-icons a:nth-child(3):hover{
-    color: #E1306C;
+    color: #4267B2;
     background: #fff;
   }
   .top .media-icons a:nth-child(4){
-    background: #0077B5;
+    background: #1DA1F2;
   }
   .top .media-icons a:nth-child(4):hover{
-    color: #0077B5;
+    color: #1DA1F2;
     background: #fff;
   }
   .top .media-icons a:nth-child(5){
-    background: #FF0000;
+    background: #E1306C;
   }
   .top .media-icons a:nth-child(5):hover{
+    color: #E1306C;
+    background: #fff;
+  }
+  .top .media-icons a:nth-child(6){
+    background: #0077B5;
+  }
+  .top .media-icons a:nth-child(6):hover{
+    color: #0077B5;
+    background: #fff;
+  }
+  .top .media-icons a:nth-child(7){
+    background: #FF0000;
+  }
+  .top .media-icons a:nth-child(7):hover{
     color: #FF0000;
     background: #fff;
   }
@@ -252,7 +267,7 @@ footer{
     footer .content .link-boxes .box{
       width: calc(100% / 3 - 10px);
     }
-    footer .content .link-boxes .input-box{
+    footer .	 .link-boxes .input-box{
       width: 60%;
     }
     .bottom-details .bottom_text span,
@@ -433,7 +448,7 @@ video:focus{
 @media (min-width: 1440px) and (max-width: 2559px){
 	#ajaproVideo {
 		margin-top: 71.5rem;
-		margin-left: -15.5rem;
+		margin-left: -15.8rem;
 		width: 81%;
 	}
 	.close-btn{
@@ -453,7 +468,7 @@ video:focus{
 	
 	#ajaproVideo {
 		margin-top: 1113px;
-		margin-right: 3.5rem;
+		margin-right: 4.5rem;
 		width: 19rem;
 	}
 		
@@ -468,12 +483,11 @@ video:focus{
 		width: 36px;
 	}
 }
-@media (max-width: 768px){
+@media (width: 768px){
 	#ajaproVideo {
-		margin-top: 62rem;
+		margin-top: 59rem;
 		width: 279px;
 		margin-left: 8px;
-		
 	}
 .small-image-row {
 	width: 100%;
@@ -483,7 +497,7 @@ video:focus{
 }
 .close-btn{
     position: absolute;
-    top: 63rem;
+    top: 60rem;
     right: 34px;
     width: 28px;
     cursor: pointer;
@@ -495,11 +509,19 @@ video:focus{
 
 
 }
-
-@media (max-width: 425px){
+@media (min-width: 425px ) and (max-width: 767px ){
+	
 	
 	.videoContainer {
 		padding: 0;
+	}
+	.h1, h1 {
+		font-size: 1.5rem !important;
+	}
+	.videoCol {
+		flex-basis: 50%;
+		min-width: 378px;
+		padding: 0px 5px 0 20px;
 	}
 
 	.small-image-row {
@@ -512,11 +534,10 @@ video:focus{
 		width: 154px;
 		
 	}
-	#ajaproVideo{
-		
-		margin-top: 15rem;
-		width: 209px;
-		margin-left: 245px;
+	#ajaproVideo {
+		margin-top: 68px;
+		width: 211px;
+		margin-left: 253px;
 	}
 	
 	.videoRow{
@@ -525,6 +546,14 @@ video:focus{
 		
 
 	}
+
+	.close-btn {
+		position: absolute;
+		top: 5rem;
+		right: -120px;
+		width: 24px;
+	}
+
 }
 @media (max-width: 320px){
 	.feature-image {
@@ -540,13 +569,13 @@ video:focus{
 		width: 111%;
 	}
 	#ajaproVideo {
-		margin-top: -15rem;
+		margin-top: -18rem;
 		width: 194px;
 		margin-left: 279px;
 	}
 	.close-btn {
 		position: absolute;
-		top: -14rem;
+		top: -17rem;
 		right: -120px;
 		width: 24px;
 	}
@@ -557,7 +586,7 @@ video:focus{
 
 }
 }
-@media (min-width: 375px) and (max-width: 767px){
+@media (min-width: 375px) and (max-width: 424px){
 	
 	#feature-image1{
 		width: 234px;
@@ -574,13 +603,13 @@ video:focus{
 		width: 127%;
 	}
 	#ajaproVideo {
-		margin-top: 6rem;
+		margin-top: 3rem;
 		width: 237px;
 		margin-left: 231px;
 	}
 	.close-btn {
 		position: absolute;
-		top: 7rem;
+		top: 4rem;
 		left: 29.5rem;
 		width: 22px;
 	}
