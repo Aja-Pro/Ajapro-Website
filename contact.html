@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Ajapro AI</title>
+    <link rel="icon" href="assets/images/ajaprologo_removebg.png" type="image/jpg">
+    <!-- <link rel="stylesheet" href="assets/main.css" /> -->
+    <link rel="stylesheet" href="assets/contact.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"></script>
+     <!-- Fontawesome CDN Link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <!-- bootstrap cdn -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<!-- bootstrap cdn end -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+		<script type="text/javascript">
+			window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
+			heap.load("3812876698");
+		</script>
+    <script type="text/javascript">
+			function updateSubmitButtonState() {
+				let name = document.getElementById("form01-name").value;
+				let email = document.getElementById("form01-email").value;
+				let number = document.getElementById("form01-number").value;
+        let company = document.getElementById("form01-company").value;
+				let message = document.getElementById("form01-message").value;
+			
+			}
+		
+			document.getElementById("form01-name").addEventListener("input", updateSubmitButtonState);
+			document.getElementById("form01-email").addEventListener("input", updateSubmitButtonState);
+			document.getElementById("form01-number").addEventListener("input", updateSubmitButtonState);
+      document.getElementById("form01-company").addEventListener("input", updateSubmitButtonState);
+			document.getElementById("form01-message").addEventListener("input", updateSubmitButtonState);
+		
+			function sendEmail() {
+				let name = document.getElementById("form01-name").value;
+				let email = document.getElementById("form01-email").value;
+				let number = document.getElementById("form01-number").value; 
+        let company = document.getElementById("form01-company").value; 
+				let message = document.getElementById("form01-message").value;
+		
+				if (!(name && email && number && company && message)) {
+					return;
+				}
+		
+				let body = "<hr/> Name:" + name + "<br/><hr/> E-mail:" + email + "<br/><hr/> Contact number:" + number +"<br/><hr/> Company/Organization:" + company + " <br/><hr/> Message:" + message + "<hr/>";
+		
+				Email.send({
+					SecureToken: "cd7baf23-5af6-41ed-a117-5dc65bf6e397",
+					To: 'enquiry@ajapro.com',
+					From: 'enquiry@ajapro.com',
+					Subject: "Message from Contact Form-2 - Ajapro Website",
+					Body: body
+				}).then(
+					message => {
+						alert("Thank you for contacting us");
+						document.getElementById("form01-name").value = "";
+						document.getElementById("form01-email").value = "";
+						document.getElementById("form01-number").value = "";
+            document.getElementById("form01-company").value = "";
+						document.getElementById("form01-message").value = "";
+						updateSubmitButtonState();
+					}
+				);
+			}
+		</script>
+
+</head>
+<body>
+   <div>
+     <!-- navbar code start here -->
+     <section class="navHead">
+        <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #858597;>
+            <a class="navbar-brand" href="https://ajapro.in/"><span class="w-text-value"><img src="assets/images/ajaprologoFull_removebg.png" width="35" height="45" alt="Contact for expert IT Services Provider Ajapro"></span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#zero">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="contact.html">Contact Us</a>
+                    <a class="dropdown-item" href="index.html#six">Social Media</a>
+                    <a class="dropdown-item" href="index.html#four">Video Gallery</a>
+                    <!-- <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a> -->
+                  </div>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li> -->
+              </ul>
+              <div><a class="btn btn-outline-info my-2 my-sm-0 active" href="contact.html" >Contact Us</a></div>
+              <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form> -->
+            </div>
+          </nav>
+     </section>
+
+     <!-- navbar code end here -->
+     <!-- Form code start -->
+     <section>
+        <div class="container">
+            <div class="content">
+              <div class="left-side">
+                <div class="address details">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div class="topic">Address</div><br>
+                  <h5 class="topic1">Bangalore</h5>
+                  <div class="text-one">H1 st, Ashok Nagar,</div>
+                  <div class="text-two"> Bengaluru, Karnataka 560025.</div><br>
+                  <h6 class="topic1">Hosur</h6>
+                  <div class="text-one">Old Bangalore Road,</div>
+                  <div class="text-two"> Hosur, Tamilnadu 635109.</div>
+                </div>
+                <div class="phone details">
+                  <i class="fas fa-phone-alt"></i>
+                  <div class="topic">Phone</div>
+                  <div class="text-one">+91 94435 12353</div>
+                  <!-- <div class="text-two">+91 94435 12353</div> -->
+                </div>
+                <div class="email details">
+                  <i class="fas fa-envelope"></i>
+                  <div class="topic">Email</div>
+                  <div class="text-one">enquiry@ajapro.com</div>
+                  <div class="text-two">support@ajapro.com</div>
+                </div>
+              </div>
+              <div class="right-side">
+                <div class="topic-text"><span class="w-text-value"><img src="assets/images/ajaprologo_removebg.png" width="35" height="40" alt="Contact for expert IT Services Provider Ajapro">Contact Us</span></div>
+                <h5>We’d love to hear from you!</h5>
+                <span><h6>Whether you have a question, comment, or just want to say hi, we’re always
+                    here to help.</h6></span><br>
+                    <h3>Share your details to connect</h3>
+                <form action="#" id="form01" method="post" onsubmit="sendEmail(); return false;">
+                  <div class="input-box">
+                    <input type="text" name="name" id="form01-name"  placeholder="Enter your name*" required/>
+                  </div>
+                  <div class="input-box">
+                    <input type="email" name="email" id="form01-email" placeholder="Enter your email*" required/>
+                  </div>
+                  <div class="input-box">
+                    <input type="tel" name="number" id="form01-number" width="100%"  minlength="11" maxlength="17" placeholder="Enter your number*(+1 (123) 456-7890)" required/>
+                  </div>
+                  <div class="input-box">
+                    <input type="text" name="company" id="form01-company" placeholder="Company/Organization*" required/>
+                  </div>
+                  <div class="input-box message-box">
+                    <textarea data-gramm_editor="false" name="message" id="form01-message" placeholder="Enter your message" required></textarea>
+                  </div>
+                  <div class="button">
+                    <!-- <input type="button" value="Send Now" /> -->
+                    <button id="submit-button" type="submit" class="button">Send Now</button>
+                  </div>
+                  <input type="hidden" name="id" value="form01"  />
+                </form>
+              </div>
+            </div>
+          </div>
+        
+     </section>
+     <!-- form code end -->
+     <!-- footer section start-->
+     <footer>
+        <div class="content">
+          <div class="top">
+            <div class="logo-details">
+              
+              <span class="logo_name">Ajapro AI</span>
+            </div>
+            <div class="media-icons">
+              <a href="https://www.facebook.com/profile.php?id=61552132544975"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://twitter.com/ajapro1"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/ajapro_enquiry/"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/ajapro-ai-solutions/"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.youtube.com/@AjaproAITechnologies"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="link-boxes">
+            <ul class="box">
+              <li class="link_name">Company</li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Get started</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Services</li>
+              <li><a href="#">AI Agents</a></li>
+              <li><a href="#">AI Product</a></li>
+              <li><a href="#">SaaS Product</a></li>
+              <li><a href="#">Block Chain Development</a></li>
+            </ul>
+            <!-- <ul class="box">
+              <li class="link_name">Account</li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">My account</a></li>
+              <li><a href="#">Prefrences</a></li>
+              <li><a href="#">Purchase</a></li>
+            </ul> -->
+            <!-- <ul class="box">
+              <li class="link_name">Courses</li>
+              <li><a href="#">HTML & CSS</a></li>
+              <li><a href="#">JavaScript</a></li>
+              <li><a href="#">Photography</a></li>
+              <li><a href="#">Photoshop</a></li>
+            </ul> -->
+            <ul class="box input-box">
+              <li class="link_name">Subscribe</li>
+              <li><input type="text" placeholder="Enter your email" disabled></li>
+              <li><input type="button" value="Subscribe"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom-details">
+          <div class="bottom_text">
+            <span class="copyright_text">Copyright © 2023 <a href="#">Ajapro.</a>All rights reserved</span>
+            <span class="policy_terms">
+              <a href="#">Privacy policy</a>
+              <a href="#">Terms & condition</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+     <!-- footer section end -->
+     <script src="assets/main.js"></script>
+   </div>
+   <!-- Country Code start here -->	
+   <script>
+    var input = document.querySelector("#form01-number");
+    var iti = window.intlTelInput(input, {
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+    });
+    // Add an event listener to dynamically update the input field
+    iti.promise.then(function () {
+        input.addEventListener("countrychange", function () {
+            var selectedCountryCode = iti.getSelectedCountryData().dialCode;
+            input.value = "+" + selectedCountryCode +" ";
+        });
+    });
+</script>
+<!-- Country Code end here -->	
+    
+</body>
+</html>
