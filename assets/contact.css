@@ -38,6 +38,9 @@ img{
     font-size: 12px;
     font-weight: 500;
 }
+.sectionBody{
+  padding-top: 88px;
+}
 .btn-outline-info {
     color: #ffffff !important;
     background-color: #030813 !important;
@@ -53,7 +56,11 @@ img{
     margin: 0px;
 }
 .navbar{
-	background-image: url(data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%20512%20512%22%20width%3D%22512%22%20height%3D%22512%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%20%3Cfilter%20id%3D%22noise%22%3E%20%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.875%22%20result%3D%22noise%22%20%2F%3E%20%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.1796875%200%22%20%2F%3E%20%3C%2Ffilter%3E%20%3Crect%20filter%3D%22url%28%23noise%29%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22512%22%20height%3D%22512%22%20fill%3D%22transparent%22%20opacity%3D%221%22%20%2F%3E%3C%2Fsvg%3E), linear-gradient(78deg, #182d55 0%,  #00DEB6 84%);
+  position: fixed !important;
+  width: 100%;
+ z-index: 3 ;
+	
+  background-image: url(data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%20512%20512%22%20width%3D%22512%22%20height%3D%22512%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%20%3Cfilter%20id%3D%22noise%22%3E%20%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.875%22%20result%3D%22noise%22%20%2F%3E%20%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.1796875%200%22%20%2F%3E%20%3C%2Ffilter%3E%20%3Crect%20filter%3D%22url%28%23noise%29%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22512%22%20height%3D%22512%22%20fill%3D%22transparent%22%20opacity%3D%221%22%20%2F%3E%3C%2Fsvg%3E), linear-gradient(78deg, #182d55 0%,  #00DEB6 84%);
 }
 /* form {
     padding-right: 20rem;
@@ -415,7 +422,7 @@ footer{
     }
     .content .top .media-icons a{
       height: 35px;
-      width: 35px;
+      width: 30px;
       font-size: 14px;
       line-height: 35px;
     }
@@ -493,29 +500,62 @@ footer{
   .iti--allow-dropdown input,.iti--allow-dropdown input[type=tel],.iti--allow-dropdown input[type=text],.iti--separate-dial-code input,.iti--separate-dial-code input[type=tel],.iti--separate-dial-code input[type=text] {
    width: 45rem !important;
   }
+  footer .content .link-boxes .box {
+    width: calc(142% / 5 - 10px);
+}
 }
 @media  (width: 768px){
   .iti--allow-dropdown input,.iti--allow-dropdown input[type=tel],.iti--allow-dropdown input[type=text],.iti--separate-dial-code input,.iti--separate-dial-code input[type=tel],.iti--separate-dial-code input[type=text] {
    width: 665px !important;
   }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 3.5rem !important;
+    padding-left: 3.5rem !important;
+}
 }
 @media  (width: 1024px){
   .iti--allow-dropdown input,.iti--allow-dropdown input[type=tel],.iti--allow-dropdown input[type=text],.iti--separate-dial-code input,.iti--separate-dial-code input[type=tel],.iti--separate-dial-code input[type=text] {
    width: 616px !important;
   }
+  .content .link-boxes .input-box {
+    margin-right: 196px;
+}
+.link-boxes .input-box input {
+  width: 357px;
+}
 }
 @media  (min-width: 425px) and (max-width: 767px) {
   .iti--allow-dropdown input,.iti--allow-dropdown input[type=tel],.iti--allow-dropdown input[type=text],.iti--separate-dial-code input,.iti--separate-dial-code input[type=tel],.iti--separate-dial-code input[type=text] {
    width: 371px !important;
   }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 3.5rem !important;
+    padding-left: 3.5rem !important;
+}
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+  margin-left: 100px;
+}
 }
 @media  (min-width: 375px) and (max-width: 424px) {
   .iti--allow-dropdown input,.iti--allow-dropdown input[type=tel],.iti--allow-dropdown input[type=text],.iti--separate-dial-code input,.iti--separate-dial-code input[type=tel],.iti--separate-dial-code input[type=text] {
    width: 321px !important;
   }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 3.5rem !important;
+    padding-left: 3.5rem !important;
+}
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+  margin-left: 80px;
+}
 }
 @media  (width: 320px){
   .iti--allow-dropdown input,.iti--allow-dropdown input[type=tel],.iti--allow-dropdown input[type=text],.iti--separate-dial-code input,.iti--separate-dial-code input[type=tel],.iti--separate-dial-code input[type=text] {
    width: 264px !important;
   }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 3.5rem !important;
+    padding-left: 3.5rem !important;
+}
 }
