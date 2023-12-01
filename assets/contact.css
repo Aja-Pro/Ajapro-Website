@@ -17,6 +17,9 @@ body {
  background-color: #8f8090 !important;
  
 }
+.navbar-dark .navbar-toggler {
+  background-color: #000000;
+}
 
 *, ::after, ::before {
   box-sizing: border-box;
